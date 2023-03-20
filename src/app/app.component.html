@@ -1,5 +1,5 @@
-<section class="cards" *ngIf="photosArray">
-  <article class="card card--1" *ngFor="let photo of photosArray">
+<section class="cards" *ngIf="catsArray">
+  <article class="card card--1" *ngFor="let photo of catsArray">
     <div class="card__img"><img src={{photo.url}} alt={{photo.title}}></div>
     <div class="card__info">
       <h3 class="card__title">{{photo.title}}</h3>
