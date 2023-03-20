@@ -10,7 +10,7 @@ import { PhotoService } from './service/photo.service';
 export class AppComponent {
   title = 'products-infinite-scroll';
 
-  photosArray!: Photo;
+  photosArray!: Photo[];
 
   constructor(private photoService: PhotoService) {
     this.photoService.getAllPhotos().subscribe((photos: any) => {
