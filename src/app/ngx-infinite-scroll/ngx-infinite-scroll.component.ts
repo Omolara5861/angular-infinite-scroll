@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { Cat } from '../model/cat';
+import { CatService } from '../service/cat.service';
 
 @Component({
   selector: 'app-ngx-infinite-scroll',
@@ -7,4 +9,24 @@ import { Component } from '@angular/core';
 })
 export class NgxInfiniteScrollComponent {
 
+  page=1;
+  cats: Cat[]=[]
+
+  catsArray!: Cat[];
+
+  constructor(private catService: CatService) {
+    this.catService.getAllCats(this.page).subscribe((cat: Cat[]) => {
+      this.catsArray=cat;
+      console.log(this.catsArray);
+    },
+      (err: any) => {
+        console.log(err);
+      })
+  }
+
+  onScroll(): void {
+    this.catService.getAllCats(++this.page).subscribe((cats: Cat[]) => {
+      this.catsArray.push(...cats)
+    })
+  }
 }
