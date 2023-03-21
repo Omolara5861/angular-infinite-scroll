@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "products-infinite-scrool": {
+    "cats-infinite-scroll": {
       "projectType": "application",
       "schematics": {},
       "root": "",
@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/products-infinite-scrool",
+            "outputPath": "dist/cats-infinite-scroll",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": [
@@ -60,10 +60,10 @@
           "builder": "@angular-devkit/build-angular:dev-server",
           "configurations": {
             "production": {
-              "browserTarget": "products-infinite-scrool:build:production"
+              "browserTarget": "cats-infinite-scroll:build:production"
             },
             "development": {
-              "browserTarget": "products-infinite-scrool:build:development"
+              "browserTarget": "cats-infinite-scroll:build:development"
             }
           },
           "defaultConfiguration": "development"
@@ -71,7 +71,7 @@
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "products-infinite-scrool:build"
+            "browserTarget": "cats-infinite-scroll:build"
           }
         },
         "test": {
