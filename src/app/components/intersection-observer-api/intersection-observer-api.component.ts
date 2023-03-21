@@ -19,7 +19,7 @@ export class IntersectionObserverAPIComponent {
   // Define an array to hold the list of 'Cat' objects
   catsArray: Cat[] = [];
 
-  totalPages = 10;
+  totalPages = 50;
   currentPage: number = 0;
 
   // Define a variable to hold the IntersectionObserver object
@@ -47,7 +47,7 @@ export class IntersectionObserverAPIComponent {
   getCats() {
     // Assign the returned Subscription object to 'catSub' variable
     this.catSub = this.catService.getAllCats(this.currentPage).subscribe((cat) => {
-      // Iterate through the fetched 'Cat' data and push each item 
+      // Iterate through the fetched 'Cat' data and push each item
       cat.forEach((cat: Cat) => {
         this.catsArray.push(cat);
       });

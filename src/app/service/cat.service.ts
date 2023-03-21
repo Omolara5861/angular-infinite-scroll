@@ -11,7 +11,7 @@ export class CatService {
   constructor(private http: HttpClient) { }
 
   getAllCats(page: number): Observable<Cat[]>{
-    return this.http.get<Cat[]>(`https://api.thecatapi.com/v1/breeds?page=${page}&limit=10`) as Observable<Cat[]>;
+    return this.http.get<Cat[]>(`https://api.thecatapi.com/v1/breeds?page=${page}&limit=9`) as Observable<Cat[]>;
   }
 
 }
