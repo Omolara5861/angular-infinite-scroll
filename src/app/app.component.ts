@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
+import { Subscription } from 'rxjs';
 import { Cat } from './model/cat';
 import { CatService } from './service/cat.service';
 
@@ -8,18 +9,5 @@ import { CatService } from './service/cat.service';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'products-infinite-scroll';
-
-  catsArray!: Cat[];
-
-  constructor(private catService: CatService) {
-    this.catService.getAllCats().subscribe((cat: any) => {
-      this.catsArray = cat;
-      console.log(this.catsArray);
-    },
-    (err:any) => {
-      console.log(err);
-    })
-  }
-
+  title = 'cats-infinite-scroll';
 }
