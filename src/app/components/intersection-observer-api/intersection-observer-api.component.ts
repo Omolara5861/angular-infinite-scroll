@@ -1,7 +1,7 @@
 import { Component, ElementRef, QueryList, ViewChildren } from '@angular/core';
 import { Subscription } from 'rxjs';
-import { Cat } from '../../app/model/cat';
-import { CatService } from '../../app/service/cat.service';
+import { Cat } from 'src/app/model/cat';
+import { CatService } from 'src/app/service/cat.service';
 
 @Component({
   selector: 'app-intersection-observer-api',

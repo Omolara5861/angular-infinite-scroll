@@ -3,6 +3,7 @@ div {
   height: 80vh;
   justify-content: center;
   align-items: center;
+  padding: 100px;
 }
 .button {
   appearance: none;
@@ -30,6 +31,7 @@ div {
   touch-action: manipulation;
   width: 100%;
   will-change: transform;
+  margin-right: 10px;
 }
 
 .button:hover {

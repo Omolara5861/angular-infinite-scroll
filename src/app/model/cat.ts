@@ -1,5 +1,5 @@
 export interface Cat {
   name: string,
-  image: any,
+  url: any,
   description: string
 }
