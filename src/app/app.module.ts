@@ -4,6 +4,7 @@ import {  HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import { NgxInfiniteScrollComponent } from './ngx-infinite-scroll/ngx-infinite-scroll.component';
 import { IntersectionObserverAPIComponent } from './intersection-observer-api/intersection-observer-api.component';
+import { AppRoutingModule } from './app-routing.module';
 
 @NgModule({
   declarations: [
@@ -13,7 +14,8 @@ import { IntersectionObserverAPIComponent } from './intersection-observer-api/in
   ],
   imports: [
     BrowserModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]
