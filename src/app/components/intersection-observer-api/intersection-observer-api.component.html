@@ -4,14 +4,12 @@
 >
   <article class="card card--1" *ngFor="let cat of catsArray; let i = index;">
     <div *ngIf="i + 1 === catsArray.length" #theLastList>
-      <div class="card__img"><img [src]="cat.url" [alt]="cat.name" /></div>
     <div class="card__info">
       <h3 class="card__title">{{ cat.name }}</h3>
       <p>{{ cat.description }}</p>
     </div>
     </div>
     <div *ngIf="i + 1 != catsArray.length">
-      <div class="card__img"><img [src]="cat.url" [alt]="cat.name" /></div>
     <div class="card__info">
       <h3 class="card__title">{{ cat.name }}</h3>
       <p>{{ cat.description }}</p>
