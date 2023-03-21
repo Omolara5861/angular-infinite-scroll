@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Cat } from '../model/cat';
-import { CatService } from '../service/cat.service';
+import { Cat } from '../../app/model/cat';
+import { CatService } from '../../app/service/cat.service';
 
 @Component({
   selector: 'app-ngx-infinite-scroll',
