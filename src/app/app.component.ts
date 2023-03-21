@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
-import { Photo } from './model/photo';
-import { PhotoService } from './service/photo.service';
+import { Cat } from './model/cat';
+import { CatService } from './service/cat.service';
 
 @Component({
   selector: 'app-root',
@@ -10,14 +10,14 @@ import { PhotoService } from './service/photo.service';
 export class AppComponent {
   title = 'products-infinite-scroll';
 
-  photosArray!: Photo[];
+  catsArray!: Cat[];
 
-  constructor(private photoService: PhotoService) {
-    this.photoService.getAllPhotos().subscribe((photos: any) => {
-      this.photosArray = photos;
-      console.log(this.photosArray);
+  constructor(private catService: CatService) {
+    this.catService.getAllCats().subscribe((cat: any) => {
+      this.catsArray = cat;
+      console.log(this.catsArray);
     },
-    (err) => {
+    (err:any) => {
       console.log(err);
     })
   }
