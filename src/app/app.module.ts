@@ -6,12 +6,14 @@ import { NgxInfiniteScrollComponent } from './components/ngx-infinite-scroll/ngx
 import { IntersectionObserverAPIComponent } from './components/intersection-observer-api/intersection-observer-api.component';
 import { AppRoutingModule } from './app-routing.module';
 import { InfiniteScrollModule } from 'ngx-infinite-scroll';
+import { IsVisibleDirective } from './directive/is-visible.directive';
 
 @NgModule({
   declarations: [
     AppComponent,
     NgxInfiniteScrollComponent,
-    IntersectionObserverAPIComponent
+    IntersectionObserverAPIComponent,
+    IsVisibleDirective
   ],
   imports: [
     BrowserModule,
